@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,9 @@ namespace COMP123_S2019_A5_301044883.Views
 {
     public partial class SelectForm : Form
     {
+        public string OutputString { get; set; }
+        public string Manufacturer { get; set; }
+
         public SelectForm()
         {
             InitializeComponent();
@@ -37,6 +41,20 @@ namespace COMP123_S2019_A5_301044883.Views
         {
             Program.productInfoForm.Show();
             this.Hide();
+        }
+
+        private void ProductDataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            var rowIndex = ProductDataGridView.CurrentCell.RowIndex;
+            var currentRow = ProductDataGridView.Rows[rowIndex];
+            var manufacturer = currentRow.Cells[2].Value.ToString();
+            var model = currentRow.Cells[3].Value.ToString();
+            var cost = currentRow.Cells[1].Value.ToString();
+
+            OutputString = manufacturer + " " + model + " " +  "$" + cost;
+
+            HardwareListLabel.Text = OutputString;
+            Manufacturer = manufacturer;
         }
     }
 }

@@ -37,8 +37,8 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.selectAnotherProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ProductIDLabel = new System.Windows.Forms.Label();
             this.ProductIDTextLabel = new System.Windows.Forms.Label();
-            this.ProductIDTextLabel1 = new System.Windows.Forms.Label();
             this.ConditionLabel = new System.Windows.Forms.Label();
             this.ConditionTextLabel = new System.Windows.Forms.Label();
             this.CostLabel = new System.Windows.Forms.Label();
@@ -46,9 +46,9 @@
             this.ProductInfoGroupBox = new System.Windows.Forms.GroupBox();
             this.ModelLabel = new System.Windows.Forms.Label();
             this.ModelTextLabel = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.ManufacturerLabel = new System.Windows.Forms.Label();
             this.OSLabel = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.ManufacturerTextLabel = new System.Windows.Forms.Label();
             this.OSTextLabel = new System.Windows.Forms.Label();
             this.PlatformLabel = new System.Windows.Forms.Label();
             this.PlatformTextLabel = new System.Windows.Forms.Label();
@@ -121,16 +121,17 @@
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
             this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveToolStripMenuItem.Text = "&Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(143, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitAplication);
             // 
@@ -149,25 +150,25 @@
             this.selectAnotherProductToolStripMenuItem.Text = "Select Another Product";
             this.selectAnotherProductToolStripMenuItem.Click += new System.EventHandler(this.SelectAnotherProductButton_Click);
             // 
+            // ProductIDLabel
+            // 
+            this.ProductIDLabel.Location = new System.Drawing.Point(12, 54);
+            this.ProductIDLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.ProductIDLabel.Name = "ProductIDLabel";
+            this.ProductIDLabel.Size = new System.Drawing.Size(116, 33);
+            this.ProductIDLabel.TabIndex = 1;
+            this.ProductIDLabel.Text = "Product ID :";
+            this.ProductIDLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // ProductIDTextLabel
             // 
-            this.ProductIDTextLabel.Location = new System.Drawing.Point(12, 54);
+            this.ProductIDTextLabel.BackColor = System.Drawing.Color.White;
+            this.ProductIDTextLabel.Location = new System.Drawing.Point(140, 54);
             this.ProductIDTextLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.ProductIDTextLabel.Name = "ProductIDTextLabel";
-            this.ProductIDTextLabel.Size = new System.Drawing.Size(116, 33);
+            this.ProductIDTextLabel.Size = new System.Drawing.Size(140, 33);
             this.ProductIDTextLabel.TabIndex = 1;
-            this.ProductIDTextLabel.Text = "Product ID :";
-            this.ProductIDTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // ProductIDTextLabel1
-            // 
-            this.ProductIDTextLabel1.BackColor = System.Drawing.Color.White;
-            this.ProductIDTextLabel1.Location = new System.Drawing.Point(140, 54);
-            this.ProductIDTextLabel1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.ProductIDTextLabel1.Name = "ProductIDTextLabel1";
-            this.ProductIDTextLabel1.Size = new System.Drawing.Size(140, 33);
-            this.ProductIDTextLabel1.TabIndex = 1;
-            this.ProductIDTextLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ProductIDTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ConditionLabel
             // 
@@ -213,9 +214,9 @@
             // 
             this.ProductInfoGroupBox.Controls.Add(this.ModelLabel);
             this.ProductInfoGroupBox.Controls.Add(this.ModelTextLabel);
-            this.ProductInfoGroupBox.Controls.Add(this.label8);
+            this.ProductInfoGroupBox.Controls.Add(this.ManufacturerLabel);
             this.ProductInfoGroupBox.Controls.Add(this.OSLabel);
-            this.ProductInfoGroupBox.Controls.Add(this.label7);
+            this.ProductInfoGroupBox.Controls.Add(this.ManufacturerTextLabel);
             this.ProductInfoGroupBox.Controls.Add(this.OSTextLabel);
             this.ProductInfoGroupBox.Controls.Add(this.PlatformLabel);
             this.ProductInfoGroupBox.Controls.Add(this.PlatformTextLabel);
@@ -249,16 +250,16 @@
             this.ModelTextLabel.TabIndex = 1;
             this.ModelTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label8
+            // ManufacturerLabel
             // 
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label8.Location = new System.Drawing.Point(18, 78);
-            this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(116, 33);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Product ID :";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ManufacturerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.ManufacturerLabel.Location = new System.Drawing.Point(9, 78);
+            this.ManufacturerLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.ManufacturerLabel.Name = "ManufacturerLabel";
+            this.ManufacturerLabel.Size = new System.Drawing.Size(125, 33);
+            this.ManufacturerLabel.TabIndex = 1;
+            this.ManufacturerLabel.Text = "Manufacturer";
+            this.ManufacturerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // OSLabel
             // 
@@ -271,16 +272,16 @@
             this.OSLabel.Text = "OS";
             this.OSLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label7
+            // ManufacturerTextLabel
             // 
-            this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label7.Location = new System.Drawing.Point(146, 78);
-            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(140, 33);
-            this.label7.TabIndex = 1;
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ManufacturerTextLabel.BackColor = System.Drawing.Color.White;
+            this.ManufacturerTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.ManufacturerTextLabel.Location = new System.Drawing.Point(146, 78);
+            this.ManufacturerTextLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.ManufacturerTextLabel.Name = "ManufacturerTextLabel";
+            this.ManufacturerTextLabel.Size = new System.Drawing.Size(140, 33);
+            this.ManufacturerTextLabel.TabIndex = 1;
+            this.ManufacturerTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // OSTextLabel
             // 
@@ -607,9 +608,9 @@
             this.Controls.Add(this.CostLabel);
             this.Controls.Add(this.ConditionTextLabel);
             this.Controls.Add(this.ConditionLabel);
-            this.Controls.Add(this.ProductIDTextLabel1);
-            this.Controls.Add(this.ConfirmInfoLabel);
             this.Controls.Add(this.ProductIDTextLabel);
+            this.Controls.Add(this.ConfirmInfoLabel);
+            this.Controls.Add(this.ProductIDLabel);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.MainMenuStrip = this.menuStrip1;
@@ -617,6 +618,7 @@
             this.Name = "ProductInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product Info Form";
+            this.Load += new System.EventHandler(this.ProductInfoForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ProductInfoGroupBox.ResumeLayout(false);
@@ -636,8 +638,8 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem selectAnotherProductToolStripMenuItem;
+        private System.Windows.Forms.Label ProductIDLabel;
         private System.Windows.Forms.Label ProductIDTextLabel;
-        private System.Windows.Forms.Label ProductIDTextLabel1;
         private System.Windows.Forms.Label ConditionLabel;
         private System.Windows.Forms.Label ConditionTextLabel;
         private System.Windows.Forms.Label CostLabel;
@@ -645,12 +647,11 @@
         private System.Windows.Forms.GroupBox ProductInfoGroupBox;
         private System.Windows.Forms.Label ModelLabel;
         private System.Windows.Forms.Label ModelTextLabel;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label ManufacturerLabel;
         private System.Windows.Forms.Label OSLabel;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label ManufacturerTextLabel;
         private System.Windows.Forms.Label OSTextLabel;
         private System.Windows.Forms.Label PlatformLabel;
-        private System.Windows.Forms.Label PlatformTextLabel;
         private System.Windows.Forms.GroupBox TechSpecsLabel;
         private System.Windows.Forms.Label CPUSpeedLabel;
         private System.Windows.Forms.Label CPUSpeedTextLabel;
@@ -675,5 +676,6 @@
         private System.Windows.Forms.Label HDDTextLabel;
         private System.Windows.Forms.Label WebCamLabel;
         private System.Windows.Forms.Label WebCamTextLabel;
+        private System.Windows.Forms.Label PlatformTextLabel;
     }
 }
