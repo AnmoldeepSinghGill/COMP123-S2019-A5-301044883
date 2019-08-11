@@ -30,10 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.ProductDataGridView = new System.Windows.Forms.DataGridView();
-            this.NextButton = new System.Windows.Forms.Button();
-            this.CancelButton = new System.Windows.Forms.Button();
-            this.HardwareLabel = new System.Windows.Forms.Label();
-            this.HardwareListLabel = new System.Windows.Forms.Label();
             this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,6 +62,10 @@
             this.powerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.webcamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.NextButton = new System.Windows.Forms.Button();
+            this.CancelButton = new System.Windows.Forms.Button();
+            this.HardwareLabel = new System.Windows.Forms.Label();
+            this.HardwareListLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ProductDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -118,46 +118,6 @@
             this.ProductDataGridView.Size = new System.Drawing.Size(759, 423);
             this.ProductDataGridView.TabIndex = 0;
             this.ProductDataGridView.SelectionChanged += new System.EventHandler(this.ProductDataGridView_SelectionChanged);
-            // 
-            // NextButton
-            // 
-            this.NextButton.Location = new System.Drawing.Point(680, 509);
-            this.NextButton.Name = "NextButton";
-            this.NextButton.Size = new System.Drawing.Size(92, 40);
-            this.NextButton.TabIndex = 1;
-            this.NextButton.Text = "Next";
-            this.NextButton.UseVisualStyleBackColor = true;
-            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
-            // 
-            // CancelButton
-            // 
-            this.CancelButton.Location = new System.Drawing.Point(567, 509);
-            this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(94, 40);
-            this.CancelButton.TabIndex = 1;
-            this.CancelButton.Text = "Cancel";
-            this.CancelButton.UseVisualStyleBackColor = true;
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
-            // 
-            // HardwareLabel
-            // 
-            this.HardwareLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.HardwareLabel.Location = new System.Drawing.Point(220, 9);
-            this.HardwareLabel.Name = "HardwareLabel";
-            this.HardwareLabel.Size = new System.Drawing.Size(325, 46);
-            this.HardwareLabel.TabIndex = 3;
-            this.HardwareLabel.Text = "Dollar Computers Hardware List";
-            this.HardwareLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // HardwareListLabel
-            // 
-            this.HardwareListLabel.BackColor = System.Drawing.Color.White;
-            this.HardwareListLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.HardwareListLabel.Location = new System.Drawing.Point(12, 509);
-            this.HardwareListLabel.Name = "HardwareListLabel";
-            this.HardwareListLabel.Size = new System.Drawing.Size(507, 40);
-            this.HardwareListLabel.TabIndex = 4;
-            this.HardwareListLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // productIDDataGridViewTextBoxColumn
             // 
@@ -412,6 +372,46 @@
             // 
             this.productBindingSource.DataSource = typeof(COMP123_S2019_A5_301044883.Models.Product);
             // 
+            // NextButton
+            // 
+            this.NextButton.Location = new System.Drawing.Point(680, 509);
+            this.NextButton.Name = "NextButton";
+            this.NextButton.Size = new System.Drawing.Size(92, 40);
+            this.NextButton.TabIndex = 1;
+            this.NextButton.Text = "Next";
+            this.NextButton.UseVisualStyleBackColor = true;
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
+            // 
+            // CancelButton
+            // 
+            this.CancelButton.Location = new System.Drawing.Point(567, 509);
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.Size = new System.Drawing.Size(94, 40);
+            this.CancelButton.TabIndex = 1;
+            this.CancelButton.Text = "Cancel";
+            this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            // 
+            // HardwareLabel
+            // 
+            this.HardwareLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.HardwareLabel.Location = new System.Drawing.Point(220, 9);
+            this.HardwareLabel.Name = "HardwareLabel";
+            this.HardwareLabel.Size = new System.Drawing.Size(325, 46);
+            this.HardwareLabel.TabIndex = 3;
+            this.HardwareLabel.Text = "Dollar Computers Hardware List";
+            this.HardwareLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // HardwareListLabel
+            // 
+            this.HardwareListLabel.BackColor = System.Drawing.Color.White;
+            this.HardwareListLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.HardwareListLabel.Location = new System.Drawing.Point(12, 509);
+            this.HardwareListLabel.Name = "HardwareListLabel";
+            this.HardwareListLabel.Size = new System.Drawing.Size(507, 40);
+            this.HardwareListLabel.TabIndex = 4;
+            this.HardwareListLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // SelectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -472,6 +472,6 @@
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Label HardwareLabel;
         private System.Windows.Forms.Label HardwareListLabel;
-        public System.Windows.Forms.DataGridView ProductDataGridView;
+        private System.Windows.Forms.DataGridView ProductDataGridView;
     }
 }

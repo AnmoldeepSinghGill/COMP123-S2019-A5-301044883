@@ -38,32 +38,14 @@ namespace COMP123_S2019_A5_301044883.Views
 
         private void ProductInfoForm_Load(object sender, EventArgs e)
         {
-
-            var ProductDataGridView = Program.selectForm.ProductDataGridView;
-
-            var rowIndex = ProductDataGridView.CurrentCell.RowIndex;
-            var currentRow = ProductDataGridView.Rows[rowIndex];
-
-            // Assigns the value from different colums to variables
-            var productID = currentRow.Cells[0].Value.ToString();
-            var cost = currentRow.Cells[1].Value.ToString();
-            var manufacturer = currentRow.Cells[2].Value.ToString();
-            var model = currentRow.Cells[3].Value.ToString();
-            var memory = currentRow.Cells[5].Value.ToString();
-            var LCDsize = currentRow.Cells[7].Value.ToString();
-            var cpuBrand = currentRow.Cells[10].Value.ToString();
-            var cpuType = currentRow.Cells[9].Value.ToString();
-
-
-            //Assigns the value from variables to respective textboxes
-            Program.productInfoForm.ProductIDTextLabel.Text = productID;
-            Program.productInfoForm.ManufacturerTextLabel.Text = manufacturer;
-            Program.productInfoForm.ModelTextLabel.Text = model;
-            Program.productInfoForm.MemoryTextLabel.Text = memory;
-            Program.productInfoForm.LCDSizeTextLabel.Text = LCDsize;
-            Program.productInfoForm.CPUBrandTextLabel.Text = cpuBrand;
-            Program.productInfoForm.CPUTypeTextLabel.Text = cpuType;
-            //Program.productInfoForm.ProductIDTextLabel.Text = productID;
+            //Assigns the value from properties to respective textboxes
+            Program.productInfoForm.ProductIDTextLabel.Text = Program.product.productID.ToString();
+            Program.productInfoForm.ManufacturerTextLabel.Text = Program.product.manufacturer;
+            Program.productInfoForm.ModelTextLabel.Text = Program.product.model;
+            Program.productInfoForm.MemoryTextLabel.Text = Program.product.RAM_size;
+            Program.productInfoForm.LCDSizeTextLabel.Text = Program.product.screensize;
+            Program.productInfoForm.CPUBrandTextLabel.Text = Program.product.CPU_brand;
+            Program.productInfoForm.CPUTypeTextLabel.Text = Program.product.CPU_type;
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -73,13 +55,13 @@ namespace COMP123_S2019_A5_301044883.Views
                 File.Open("Computer.txt", FileMode.Create)))
             {
                 //Write strings to File
-                outputString.WriteLine("ProductID: " + ProductIDTextLabel.Text);
-                outputString.WriteLine("Manufacturer: " + ManufacturerTextLabel.Text);
-                outputString.WriteLine(ModelTextLabel);
-                outputString.WriteLine(MemoryTextLabel);
-                outputString.WriteLine(LCDSizeTextLabel);
-                outputString.WriteLine(CPUBrandTextLabel);
-                outputString.WriteLine(CPUTypeTextLabel);
+                outputString.WriteLine("ProductID: " + Program.product.productID.ToString());
+                outputString.WriteLine("Manufacturer: " + Program.product.manufacturer);
+                outputString.WriteLine("ModelLabel: " + Program.product.model);
+                outputString.WriteLine("Memory: " + Program.product.RAM_size);
+                outputString.WriteLine("LCD Size: " + Program.product.screensize);
+                outputString.WriteLine("CPU Brand: " + Program.product.CPU_brand);
+                outputString.WriteLine("CPU Type: " + Program.product.CPU_type);
 
                 // close 
                 outputString.Close();
@@ -88,6 +70,11 @@ namespace COMP123_S2019_A5_301044883.Views
 
             MessageBox.Show("File Saved Succesfully!", "Saved",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void ProductInfoForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

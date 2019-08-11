@@ -55,6 +55,16 @@ namespace COMP123_S2019_A5_301044883.Views
 
             HardwareListLabel.Text = OutputString;
             Manufacturer = manufacturer;
+
+            Program.product.model = currentRow.Cells[3].Value.ToString();
+            Program.product.productID = short.Parse(currentRow.Cells[0].Value.ToString());
+            Program.product.cost = decimal.Parse(currentRow.Cells[1].Value.ToString());
+            Program.product.manufacturer = currentRow.Cells[2].Value.ToString();
+            Program.product.model = currentRow.Cells[3].Value.ToString();
+            Program.product.RAM_size = currentRow.Cells[5].Value.ToString();
+            Program.product.screensize = currentRow.Cells[7].Value.ToString();
+            Program.product.CPU_brand = currentRow.Cells[10].Value.ToString();
+            Program.product.CPU_type = currentRow.Cells[9].Value.ToString();
         }
     }
 }
