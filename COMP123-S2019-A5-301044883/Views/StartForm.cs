@@ -27,6 +27,7 @@ namespace COMP123_S2019_A5_301044883.Views
         {
             Program.productInfoForm.Show();
             this.Hide();
+            Program.productInfoForm.OpenSavedOrder();
         }
 
         private void ExitButton_Click(object sender, EventArgs e)

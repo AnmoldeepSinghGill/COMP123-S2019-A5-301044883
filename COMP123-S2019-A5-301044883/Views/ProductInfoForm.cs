@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -36,7 +37,89 @@ namespace COMP123_S2019_A5_301044883.Views
             this.Hide();
         }
 
-        private void ProductInfoForm_Load(object sender, EventArgs e)
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //configure save file dialog box
+            ProductSaveFileDialog.FileName = "Product.txt";
+            ProductSaveFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
+            ProductSaveFileDialog.Filter = "Text Files (*.txt)|*.txt | All Files (*.*)|*.*";
+
+            //Open Svae File Dialog
+            var ShowDialog = ProductSaveFileDialog.ShowDialog();
+
+            if (ShowDialog != DialogResult.Cancel)
+            {
+                //open Sterem Writer to write
+                using (StreamWriter outputString = new StreamWriter(
+                    File.Open("Product.txt", FileMode.Create)))
+                {
+                    //Write strings to File
+                    outputString.WriteLine(Program.product.productID.ToString());
+                    outputString.WriteLine(Program.product.manufacturer);
+                    outputString.WriteLine(Program.product.model);
+                    outputString.WriteLine(Program.product.RAM_size);
+                    outputString.WriteLine(Program.product.screensize);
+                    outputString.WriteLine(Program.product.CPU_brand);
+                    outputString.WriteLine(Program.product.CPU_type);
+
+                    // close 
+                    outputString.Close();
+                    outputString.Dispose();
+                }
+
+                MessageBox.Show("File Saved Succesfully!", "Saved",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        public void OpenSavedOrder()
+        {
+            //configure save file dialog box
+            ProductOpenFileDialog.FileName = "Product.txt";
+            ProductOpenFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
+            ProductOpenFileDialog.Filter = "Text Files (*.txt)|*.txt | All Files (*.*)|*.*";
+
+            //Open Svae File Dialog
+            var ShowDialog = ProductOpenFileDialog.ShowDialog();
+            if (ShowDialog != DialogResult.Cancel)
+            {
+                try
+                {
+                    //open Sterem Writer to write
+                    using (StreamReader inputString = new StreamReader(
+                        File.Open(ProductOpenFileDialog.FileName, FileMode.Open)))
+                    {
+                        //Write strings to File
+                        //Program.product.productID = short.Parse(inputString.ReadLine());
+                        Program.product.manufacturer = inputString.ReadLine();
+                        Program.product.model = inputString.ReadLine();
+                        Program.product.RAM_size = inputString.ReadLine();
+                        Program.product.screensize = inputString.ReadLine();
+                        Program.product.CPU_brand = inputString.ReadLine();
+                        Program.product.CPU_type = inputString.ReadLine();
+
+                        // close 
+                        inputString.Close();
+                        inputString.Dispose();
+                    }
+
+                    MessageBox.Show("File Retrieved Succesfully!", "Opened",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (IOException exception)
+                {
+                    Debug.WriteLine("ERROR: " + exception.Message, "ERROR",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void ProductInfoForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void ProductInfoForm_Activated(object sender, EventArgs e)
         {
             //Assigns the value from properties to respective textboxes
             Program.productInfoForm.ProductIDTextLabel.Text = Program.product.productID.ToString();
@@ -46,35 +129,6 @@ namespace COMP123_S2019_A5_301044883.Views
             Program.productInfoForm.LCDSizeTextLabel.Text = Program.product.screensize;
             Program.productInfoForm.CPUBrandTextLabel.Text = Program.product.CPU_brand;
             Program.productInfoForm.CPUTypeTextLabel.Text = Program.product.CPU_type;
-        }
-
-        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //open Sterem Writer to write
-            using (StreamWriter outputString = new StreamWriter(
-                File.Open("Computer.txt", FileMode.Create)))
-            {
-                //Write strings to File
-                outputString.WriteLine("ProductID: " + Program.product.productID.ToString());
-                outputString.WriteLine("Manufacturer: " + Program.product.manufacturer);
-                outputString.WriteLine("ModelLabel: " + Program.product.model);
-                outputString.WriteLine("Memory: " + Program.product.RAM_size);
-                outputString.WriteLine("LCD Size: " + Program.product.screensize);
-                outputString.WriteLine("CPU Brand: " + Program.product.CPU_brand);
-                outputString.WriteLine("CPU Type: " + Program.product.CPU_type);
-
-                // close 
-                outputString.Close();
-                outputString.Dispose();
-            }
-
-            MessageBox.Show("File Saved Succesfully!", "Saved",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void ProductInfoForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
         }
     }
 }
