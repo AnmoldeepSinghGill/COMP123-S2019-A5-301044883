@@ -86,21 +86,21 @@ namespace COMP123_S2019_A5_301044883.Views
                 try
                 {
                     //open Sterem Writer to write
-                    using (StreamReader inputString = new StreamReader(
+                    using (StreamReader inputStream = new StreamReader(
                         File.Open(ProductOpenFileDialog.FileName, FileMode.Open)))
                     {
                         //Write strings to File
                         //Program.product.productID = short.Parse(inputString.ReadLine());
-                        Program.product.manufacturer = inputString.ReadLine();
-                        Program.product.model = inputString.ReadLine();
-                        Program.product.RAM_size = inputString.ReadLine();
-                        Program.product.screensize = inputString.ReadLine();
-                        Program.product.CPU_brand = inputString.ReadLine();
-                        Program.product.CPU_type = inputString.ReadLine();
+                        Program.product.manufacturer = inputStream.ReadLine();
+                        Program.product.model = inputStream.ReadLine();
+                        Program.product.RAM_size = inputStream.ReadLine();
+                        Program.product.screensize = inputStream.ReadLine();
+                        Program.product.CPU_brand = inputStream.ReadLine();
+                        Program.product.CPU_type = inputStream.ReadLine();
 
                         // close 
-                        inputString.Close();
-                        inputString.Dispose();
+                        inputStream.Close();
+                        inputStream.Dispose();
                     }
 
                     MessageBox.Show("File Retrieved Succesfully!", "Opened",
