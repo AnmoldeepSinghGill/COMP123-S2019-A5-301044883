@@ -118,19 +118,19 @@
             this.printToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.printToolStripMenuItem1.Name = "printToolStripMenuItem1";
             this.printToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.printToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.printToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
             this.printToolStripMenuItem1.Text = "&Print";
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(137, 6);
             // 
             // exitToolStripMenuItem1
             // 
             this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
             this.exitToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
             this.exitToolStripMenuItem1.Text = "E&xit";
             this.exitToolStripMenuItem1.Click += new System.EventHandler(this.ExitApplication);
             // 
@@ -146,7 +146,7 @@
             // 
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
             this.backToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.backToolStripMenuItem.Text = "Back";
             // 
             // helpToolStripMenuItem
@@ -161,7 +161,7 @@
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -703,6 +703,7 @@
             this.Name = "OrderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderForm";
+            this.Activated += new System.EventHandler(this.OrderForm_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.OrderForm_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

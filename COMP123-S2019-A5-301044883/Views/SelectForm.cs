@@ -16,7 +16,6 @@ namespace COMP123_S2019_A5_301044883.Views
     public partial class SelectForm : Form
     {
         public string OutputString { get; set; }
-        public string Manufacturer { get; set; }
 
         public SelectForm()
         {
@@ -54,7 +53,6 @@ namespace COMP123_S2019_A5_301044883.Views
             OutputString = manufacturer + " " + model + " " +  "$" + cost;
 
             HardwareListLabel.Text = OutputString;
-            Manufacturer = manufacturer;
 
             Program.product.productID = short.Parse(currentRow.Cells[0].Value.ToString());
             Program.product.cost = decimal.Parse(currentRow.Cells[1].Value.ToString());
