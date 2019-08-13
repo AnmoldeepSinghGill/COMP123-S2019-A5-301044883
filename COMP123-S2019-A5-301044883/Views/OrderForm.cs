@@ -61,15 +61,20 @@ namespace COMP123_S2019_A5_301044883.Views
             OSTextLabel.Text = Program.product.OS;
             PlatformTextLabel.Text = Program.product.platform;
             ConditionTextLabel.Text = Program.product.condition;
-            PriceTextLabel.Text = "$" + Program.product.cost.ToString();
+            PriceTextLabel.Text = String.Format("{0:C}", Program.product.cost);
 
-            var salesTax = (Program.product.cost / 100) * 13;
+            var salesTax = Math.Round(Convert.ToDouble(Program.product.cost / 100 * 13), 2);
 
-            SalesTaxTextLabel.Text = "$" + salesTax.ToString();
+            SalesTaxTextLabel.Text = String.Format("{0:C}", salesTax);
 
-            var totalPrice = Program.product.cost + salesTax;
+            var totalPrice = Convert.ToDouble(Program.product.cost) + salesTax;
 
-            TotalPriceTextLabel.Text = "$" + totalPrice.ToString();
+            TotalPriceTextLabel.Text = String.Format("{0:C}", totalPrice);
+        }
+
+        private void printToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Your order is being Printed", "Printing...", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

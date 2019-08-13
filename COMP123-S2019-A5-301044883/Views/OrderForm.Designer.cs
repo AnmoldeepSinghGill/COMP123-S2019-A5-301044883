@@ -43,8 +43,8 @@
             this.OSLabel = new System.Windows.Forms.Label();
             this.WebCamTextLabel = new System.Windows.Forms.Label();
             this.WebCamLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.GPUTypeTextLabel = new System.Windows.Forms.Label();
+            this.GPUTypeLabel = new System.Windows.Forms.Label();
             this.HDDTextLabel = new System.Windows.Forms.Label();
             this.HDDLabel = new System.Windows.Forms.Label();
             this.CPUSpeedLabel = new System.Windows.Forms.Label();
@@ -69,8 +69,8 @@
             this.ConditionLabel = new System.Windows.Forms.Label();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.GPUTypeTextLabel = new System.Windows.Forms.Label();
-            this.GPUTypeLabel = new System.Windows.Forms.Label();
+            this.GPUTypeTextLabel1 = new System.Windows.Forms.Label();
+            this.GPUTypeLabel1 = new System.Windows.Forms.Label();
             this.PlatformPictureBox = new System.Windows.Forms.PictureBox();
             this.PriceGroupBox = new System.Windows.Forms.GroupBox();
             this.TotalPriceTextLabel = new System.Windows.Forms.Label();
@@ -118,19 +118,20 @@
             this.printToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.printToolStripMenuItem1.Name = "printToolStripMenuItem1";
             this.printToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.printToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
+            this.printToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.printToolStripMenuItem1.Text = "&Print";
+            this.printToolStripMenuItem1.Click += new System.EventHandler(this.printToolStripMenuItem1_Click);
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(137, 6);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(177, 6);
             // 
             // exitToolStripMenuItem1
             // 
             this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
             this.exitToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem1.Text = "E&xit";
             this.exitToolStripMenuItem1.Click += new System.EventHandler(this.ExitApplication);
             // 
@@ -146,8 +147,9 @@
             // 
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
             this.backToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.backToolStripMenuItem.Text = "Back";
+            this.backToolStripMenuItem.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -161,7 +163,7 @@
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -171,8 +173,8 @@
             this.SystemComponentsGroupBox.Controls.Add(this.OSLabel);
             this.SystemComponentsGroupBox.Controls.Add(this.WebCamTextLabel);
             this.SystemComponentsGroupBox.Controls.Add(this.WebCamLabel);
-            this.SystemComponentsGroupBox.Controls.Add(this.label1);
-            this.SystemComponentsGroupBox.Controls.Add(this.label2);
+            this.SystemComponentsGroupBox.Controls.Add(this.GPUTypeTextLabel);
+            this.SystemComponentsGroupBox.Controls.Add(this.GPUTypeLabel);
             this.SystemComponentsGroupBox.Controls.Add(this.HDDTextLabel);
             this.SystemComponentsGroupBox.Controls.Add(this.HDDLabel);
             this.SystemComponentsGroupBox.Controls.Add(this.CPUSpeedLabel);
@@ -247,27 +249,27 @@
             this.WebCamLabel.Text = "WebCam";
             this.WebCamLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // GPUTypeTextLabel
             // 
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label1.Location = new System.Drawing.Point(140, 421);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(358, 33);
-            this.label1.TabIndex = 1;
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.GPUTypeTextLabel.BackColor = System.Drawing.Color.White;
+            this.GPUTypeTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.GPUTypeTextLabel.Location = new System.Drawing.Point(140, 421);
+            this.GPUTypeTextLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.GPUTypeTextLabel.Name = "GPUTypeTextLabel";
+            this.GPUTypeTextLabel.Size = new System.Drawing.Size(358, 33);
+            this.GPUTypeTextLabel.TabIndex = 1;
+            this.GPUTypeTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label2
+            // GPUTypeLabel
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label2.Location = new System.Drawing.Point(30, 421);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 33);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "GPU Type";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.GPUTypeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.GPUTypeLabel.Location = new System.Drawing.Point(30, 421);
+            this.GPUTypeLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.GPUTypeLabel.Name = "GPUTypeLabel";
+            this.GPUTypeLabel.Size = new System.Drawing.Size(101, 33);
+            this.GPUTypeLabel.TabIndex = 1;
+            this.GPUTypeLabel.Text = "GPU Type";
+            this.GPUTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // HDDTextLabel
             // 
@@ -480,10 +482,10 @@
             // 
             this.PlatformTextLabel.BackColor = System.Drawing.Color.White;
             this.PlatformTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.PlatformTextLabel.Location = new System.Drawing.Point(362, 38);
+            this.PlatformTextLabel.Location = new System.Drawing.Point(375, 38);
             this.PlatformTextLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.PlatformTextLabel.Name = "PlatformTextLabel";
-            this.PlatformTextLabel.Size = new System.Drawing.Size(136, 33);
+            this.PlatformTextLabel.Size = new System.Drawing.Size(123, 33);
             this.PlatformTextLabel.TabIndex = 5;
             this.PlatformTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -528,27 +530,27 @@
             this.lineShape1.Y1 = 121;
             this.lineShape1.Y2 = 121;
             // 
-            // GPUTypeTextLabel
+            // GPUTypeTextLabel1
             // 
-            this.GPUTypeTextLabel.BackColor = System.Drawing.Color.White;
-            this.GPUTypeTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.GPUTypeTextLabel.Location = new System.Drawing.Point(338, 307);
-            this.GPUTypeTextLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.GPUTypeTextLabel.Name = "GPUTypeTextLabel";
-            this.GPUTypeTextLabel.Size = new System.Drawing.Size(169, 33);
-            this.GPUTypeTextLabel.TabIndex = 1;
-            this.GPUTypeTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.GPUTypeTextLabel1.BackColor = System.Drawing.Color.White;
+            this.GPUTypeTextLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.GPUTypeTextLabel1.Location = new System.Drawing.Point(338, 307);
+            this.GPUTypeTextLabel1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.GPUTypeTextLabel1.Name = "GPUTypeTextLabel1";
+            this.GPUTypeTextLabel1.Size = new System.Drawing.Size(169, 33);
+            this.GPUTypeTextLabel1.TabIndex = 1;
+            this.GPUTypeTextLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // GPUTypeLabel
+            // GPUTypeLabel1
             // 
-            this.GPUTypeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.GPUTypeLabel.Location = new System.Drawing.Point(235, 307);
-            this.GPUTypeLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.GPUTypeLabel.Name = "GPUTypeLabel";
-            this.GPUTypeLabel.Size = new System.Drawing.Size(101, 33);
-            this.GPUTypeLabel.TabIndex = 1;
-            this.GPUTypeLabel.Text = "GPU Type";
-            this.GPUTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.GPUTypeLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.GPUTypeLabel1.Location = new System.Drawing.Point(12, 12);
+            this.GPUTypeLabel1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.GPUTypeLabel1.Name = "GPUTypeLabel1";
+            this.GPUTypeLabel1.Size = new System.Drawing.Size(101, 33);
+            this.GPUTypeLabel1.TabIndex = 1;
+            this.GPUTypeLabel1.Text = "GPU Type";
+            this.GPUTypeLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PlatformPictureBox
             // 
@@ -751,10 +753,10 @@
         private System.Windows.Forms.Label CPUSpeedTextLabel;
         private System.Windows.Forms.Label HDDTextLabel;
         private System.Windows.Forms.Label HDDLabel;
+        private System.Windows.Forms.Label GPUTypeTextLabel1;
+        private System.Windows.Forms.Label GPUTypeLabel1;
         private System.Windows.Forms.Label GPUTypeTextLabel;
         private System.Windows.Forms.Label GPUTypeLabel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label WebCamTextLabel;
         private System.Windows.Forms.Label WebCamLabel;
         private System.Windows.Forms.Label OSTextLabel;

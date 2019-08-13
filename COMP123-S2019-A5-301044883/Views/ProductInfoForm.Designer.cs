@@ -114,6 +114,7 @@
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
             this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openToolStripMenuItem.Text = "&Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
@@ -546,10 +547,10 @@
             // 
             // ConfirmInfoLabel
             // 
-            this.ConfirmInfoLabel.Location = new System.Drawing.Point(15, 478);
+            this.ConfirmInfoLabel.Location = new System.Drawing.Point(15, 464);
             this.ConfirmInfoLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.ConfirmInfoLabel.Name = "ConfirmInfoLabel";
-            this.ConfirmInfoLabel.Size = new System.Drawing.Size(294, 33);
+            this.ConfirmInfoLabel.Size = new System.Drawing.Size(237, 60);
             this.ConfirmInfoLabel.TabIndex = 1;
             this.ConfirmInfoLabel.Text = "Click Next To Confirm Selection";
             this.ConfirmInfoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -639,7 +640,6 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
@@ -686,5 +686,6 @@
         private System.Windows.Forms.Label PlatformTextLabel;
         private System.Windows.Forms.OpenFileDialog ProductOpenFileDialog;
         private System.Windows.Forms.SaveFileDialog ProductSaveFileDialog;
+        public System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
     }
 }

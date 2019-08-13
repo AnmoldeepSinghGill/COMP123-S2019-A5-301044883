@@ -48,9 +48,9 @@ namespace COMP123_S2019_A5_301044883.Views
             var currentRow = ProductDataGridView.Rows[rowIndex];
             var manufacturer = currentRow.Cells[2].Value.ToString();
             var model = currentRow.Cells[3].Value.ToString();
-            var cost = currentRow.Cells[1].Value.ToString();
+            var cost = currentRow.Cells[1].Value;
 
-            OutputString = manufacturer + " " + model + " " +  "$" + cost;
+            OutputString = manufacturer + " " + model + " " + String.Format("{0:C}", cost);
 
             HardwareListLabel.Text = OutputString;
 
