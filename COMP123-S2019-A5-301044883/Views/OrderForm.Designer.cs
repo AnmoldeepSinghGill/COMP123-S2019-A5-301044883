@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.printToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,7 +70,6 @@
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.GPUTypeTextLabel1 = new System.Windows.Forms.Label();
             this.GPUTypeLabel1 = new System.Windows.Forms.Label();
-            this.PlatformPictureBox = new System.Windows.Forms.PictureBox();
             this.PriceGroupBox = new System.Windows.Forms.GroupBox();
             this.TotalPriceTextLabel = new System.Windows.Forms.Label();
             this.TotalPriceLabel = new System.Windows.Forms.Label();
@@ -84,10 +82,12 @@
             this.CancelButton = new System.Windows.Forms.Button();
             this.FinishButton = new System.Windows.Forms.Button();
             this.BackButton = new System.Windows.Forms.Button();
+            this.PlatformPictureBox = new System.Windows.Forms.PictureBox();
+            this.printToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SystemComponentsGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PlatformPictureBox)).BeginInit();
             this.PriceGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PlatformPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -112,26 +112,16 @@
             this.fileToolStripMenuItem1.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem1.Text = "&File";
             // 
-            // printToolStripMenuItem1
-            // 
-            this.printToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripMenuItem1.Image")));
-            this.printToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.printToolStripMenuItem1.Name = "printToolStripMenuItem1";
-            this.printToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.printToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.printToolStripMenuItem1.Text = "&Print";
-            this.printToolStripMenuItem1.Click += new System.EventHandler(this.printToolStripMenuItem1_Click);
-            // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(137, 6);
             // 
             // exitToolStripMenuItem1
             // 
             this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
             this.exitToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
             this.exitToolStripMenuItem1.Text = "E&xit";
             this.exitToolStripMenuItem1.Click += new System.EventHandler(this.ExitApplication);
             // 
@@ -147,7 +137,7 @@
             // 
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
             this.backToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.backToolStripMenuItem.Text = "Back";
             this.backToolStripMenuItem.Click += new System.EventHandler(this.BackButton_Click);
             // 
@@ -163,7 +153,7 @@
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -552,15 +542,6 @@
             this.GPUTypeLabel1.Text = "GPU Type";
             this.GPUTypeLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // PlatformPictureBox
-            // 
-            this.PlatformPictureBox.InitialImage = ((System.Drawing.Image)(resources.GetObject("PlatformPictureBox.InitialImage")));
-            this.PlatformPictureBox.Location = new System.Drawing.Point(550, 42);
-            this.PlatformPictureBox.Name = "PlatformPictureBox";
-            this.PlatformPictureBox.Size = new System.Drawing.Size(250, 200);
-            this.PlatformPictureBox.TabIndex = 2;
-            this.PlatformPictureBox.TabStop = false;
-            // 
             // PriceGroupBox
             // 
             this.PriceGroupBox.Controls.Add(this.TotalPriceTextLabel);
@@ -687,6 +668,26 @@
             this.BackButton.UseVisualStyleBackColor = true;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
+            // PlatformPictureBox
+            // 
+            this.PlatformPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("PlatformPictureBox.Image")));
+            this.PlatformPictureBox.InitialImage = null;
+            this.PlatformPictureBox.Location = new System.Drawing.Point(550, 42);
+            this.PlatformPictureBox.Name = "PlatformPictureBox";
+            this.PlatformPictureBox.Size = new System.Drawing.Size(250, 200);
+            this.PlatformPictureBox.TabIndex = 2;
+            this.PlatformPictureBox.TabStop = false;
+            // 
+            // printToolStripMenuItem1
+            // 
+            this.printToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripMenuItem1.Image")));
+            this.printToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.printToolStripMenuItem1.Name = "printToolStripMenuItem1";
+            this.printToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.printToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
+            this.printToolStripMenuItem1.Text = "&Print";
+            this.printToolStripMenuItem1.Click += new System.EventHandler(this.printToolStripMenuItem1_Click);
+            // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -700,6 +701,7 @@
             this.Controls.Add(this.SystemComponentsGroupBox);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "OrderForm";
@@ -710,8 +712,8 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.SystemComponentsGroupBox.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PlatformPictureBox)).EndInit();
             this.PriceGroupBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PlatformPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

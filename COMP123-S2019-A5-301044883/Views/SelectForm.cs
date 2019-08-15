@@ -11,6 +11,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+ * Author: Anmoldeep Singh Gill
+ * Student ID: 301044883
+ * Created on: 31 July 2019
+ * Description: This Form includes a DataGridview
+ *              which displays data about the computers
+ *              and from which the customer could select.
+ */
+
 namespace COMP123_S2019_A5_301044883.Views
 {
     public partial class SelectForm : Form

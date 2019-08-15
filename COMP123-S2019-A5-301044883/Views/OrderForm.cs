@@ -7,6 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using COMP123_S2019_A5_301044883;
+using COMP123_S2019_A5_301044883.Properties;
+
+/*
+ * Author: Anmoldeep Singh Gill
+ * Student ID: 301044883
+ * Created on: 31 July 2019
+ * Description: This Form gets all the details of the
+ *              product that is selected and displays 
+ *              them with the picture of Platform and 
+ *              Total price with Tax
+ */
 
 namespace COMP123_S2019_A5_301044883.Views
 {
@@ -63,13 +75,24 @@ namespace COMP123_S2019_A5_301044883.Views
             ConditionTextLabel.Text = Program.product.condition;
             PriceTextLabel.Text = String.Format("{0:C}", Program.product.cost);
 
-            var salesTax = Math.Round(Convert.ToDouble(Program.product.cost / 100 * 13), 2);
+            var salesTax = Math.Round(Convert.ToDouble(Program.product.cost / 100 * 13), 1);
 
             SalesTaxTextLabel.Text = String.Format("{0:C}", salesTax);
 
             var totalPrice = Convert.ToDouble(Program.product.cost) + salesTax;
 
             TotalPriceTextLabel.Text = String.Format("{0:C}", totalPrice);
+
+            // Changes the Image as the Platform Changes
+            if(PlatformTextLabel.Text == "Laptop")
+            {
+                PlatformPictureBox.Image = Resources.LaptopPic;
+            }
+            else if (PlatformTextLabel.Text == "Desktop PC")
+            {
+                PlatformPictureBox.Image = Resources.Desktop;
+            }
+
         }
 
         private void printToolStripMenuItem1_Click(object sender, EventArgs e)

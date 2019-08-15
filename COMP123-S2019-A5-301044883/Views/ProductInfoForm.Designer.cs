@@ -112,7 +112,7 @@
             this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.openToolStripMenuItem.Text = "&Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
@@ -122,19 +122,19 @@
             this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.saveToolStripMenuItem.Text = "&Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(143, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitAplication);
             // 
@@ -195,10 +195,10 @@
             // 
             // CostLabel
             // 
-            this.CostLabel.Location = new System.Drawing.Point(567, 54);
+            this.CostLabel.Location = new System.Drawing.Point(575, 54);
             this.CostLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.CostLabel.Name = "CostLabel";
-            this.CostLabel.Size = new System.Drawing.Size(116, 33);
+            this.CostLabel.Size = new System.Drawing.Size(108, 33);
             this.CostLabel.TabIndex = 1;
             this.CostLabel.Text = "Cost";
             this.CostLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -209,7 +209,7 @@
             this.CostTextLabel.Location = new System.Drawing.Point(655, 54);
             this.CostTextLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.CostTextLabel.Name = "CostTextLabel";
-            this.CostTextLabel.Size = new System.Drawing.Size(92, 33);
+            this.CostTextLabel.Size = new System.Drawing.Size(105, 33);
             this.CostTextLabel.TabIndex = 1;
             this.CostTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -439,10 +439,10 @@
             // 
             this.WebCamTextLabel.BackColor = System.Drawing.Color.White;
             this.WebCamTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.WebCamTextLabel.Location = new System.Drawing.Point(570, 129);
+            this.WebCamTextLabel.Location = new System.Drawing.Point(569, 129);
             this.WebCamTextLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.WebCamTextLabel.Name = "WebCamTextLabel";
-            this.WebCamTextLabel.Size = new System.Drawing.Size(167, 33);
+            this.WebCamTextLabel.Size = new System.Drawing.Size(168, 33);
             this.WebCamTextLabel.TabIndex = 1;
             this.WebCamTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -450,10 +450,10 @@
             // 
             this.CPUTypeTextLabel.BackColor = System.Drawing.Color.White;
             this.CPUTypeTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.CPUTypeTextLabel.Location = new System.Drawing.Point(137, 129);
+            this.CPUTypeTextLabel.Location = new System.Drawing.Point(121, 129);
             this.CPUTypeTextLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.CPUTypeTextLabel.Name = "CPUTypeTextLabel";
-            this.CPUTypeTextLabel.Size = new System.Drawing.Size(92, 33);
+            this.CPUTypeTextLabel.Size = new System.Drawing.Size(108, 33);
             this.CPUTypeTextLabel.TabIndex = 1;
             this.CPUTypeTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -483,10 +483,10 @@
             // 
             this.CPUBrandTextLabel.BackColor = System.Drawing.Color.White;
             this.CPUBrandTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.CPUBrandTextLabel.Location = new System.Drawing.Point(137, 86);
+            this.CPUBrandTextLabel.Location = new System.Drawing.Point(125, 86);
             this.CPUBrandTextLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.CPUBrandTextLabel.Name = "CPUBrandTextLabel";
-            this.CPUBrandTextLabel.Size = new System.Drawing.Size(92, 33);
+            this.CPUBrandTextLabel.Size = new System.Drawing.Size(104, 33);
             this.CPUBrandTextLabel.TabIndex = 1;
             this.CPUBrandTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -516,10 +516,10 @@
             // 
             this.HDDTextLabel.BackColor = System.Drawing.Color.White;
             this.HDDTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.HDDTextLabel.Location = new System.Drawing.Point(570, 44);
+            this.HDDTextLabel.Location = new System.Drawing.Point(565, 44);
             this.HDDTextLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.HDDTextLabel.Name = "HDDTextLabel";
-            this.HDDTextLabel.Size = new System.Drawing.Size(167, 33);
+            this.HDDTextLabel.Size = new System.Drawing.Size(172, 33);
             this.HDDTextLabel.TabIndex = 1;
             this.HDDTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -538,10 +538,10 @@
             // 
             this.MemoryTextLabel.BackColor = System.Drawing.Color.White;
             this.MemoryTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.MemoryTextLabel.Location = new System.Drawing.Point(137, 44);
+            this.MemoryTextLabel.Location = new System.Drawing.Point(125, 44);
             this.MemoryTextLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.MemoryTextLabel.Name = "MemoryTextLabel";
-            this.MemoryTextLabel.Size = new System.Drawing.Size(92, 33);
+            this.MemoryTextLabel.Size = new System.Drawing.Size(104, 33);
             this.MemoryTextLabel.TabIndex = 1;
             this.MemoryTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -620,6 +620,7 @@
             this.Controls.Add(this.ProductIDLabel);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "ProductInfoForm";

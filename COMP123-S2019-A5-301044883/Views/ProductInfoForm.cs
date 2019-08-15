@@ -11,6 +11,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+ * Author: Anmoldeep Singh Gill
+ * Student ID: 301044883
+ * Created on: 31 July 2019
+ * Description: This Form shows all the Product info
+ *              in labels that the customer has selected in the 
+ *              Select Form or have opened an order from a file.
+ */
+
 namespace COMP123_S2019_A5_301044883.Views
 {
     public partial class ProductInfoForm : Form
