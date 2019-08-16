@@ -547,6 +547,8 @@
             // 
             // ConfirmInfoLabel
             // 
+            this.ConfirmInfoLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ConfirmInfoLabel.ForeColor = System.Drawing.Color.Green;
             this.ConfirmInfoLabel.Location = new System.Drawing.Point(15, 464);
             this.ConfirmInfoLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.ConfirmInfoLabel.Name = "ConfirmInfoLabel";

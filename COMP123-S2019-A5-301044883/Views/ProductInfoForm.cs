@@ -29,6 +29,12 @@ namespace COMP123_S2019_A5_301044883.Views
             InitializeComponent();
         }
 
+        /// <summary>
+        /// This is an event Handler for Select Another Product 
+        /// Click Event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SelectAnotherProductButton_Click(object sender, EventArgs e)
         {
             Program.selectForm.Show();
@@ -46,6 +52,10 @@ namespace COMP123_S2019_A5_301044883.Views
             this.Hide();
         }
 
+        /// <summary>
+        /// This method is used to open the saved order from 
+        /// the existing file
+        /// </summary>
         public void OpenSavedOrder()
         {
             //configure save file dialog box
@@ -98,6 +108,12 @@ namespace COMP123_S2019_A5_301044883.Views
             }
         }
 
+        /// <summary>
+        /// This is an event handler for Save Button on tool Strip Menu
+        /// and this saves the current order details in a text file.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //configure save file dialog box
@@ -143,11 +159,23 @@ namespace COMP123_S2019_A5_301044883.Views
             }
         }
 
+        /// <summary>
+        /// This is an event handler for the Form closing event 
+        /// for Product Info Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ProductInfoForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
 
+        /// <summary>
+        /// This method populates the labels on the form when 
+        /// it is activated.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ProductInfoForm_Activated(object sender, EventArgs e)
         {
             //Assigns the value from properties to respective textboxes
@@ -170,6 +198,12 @@ namespace COMP123_S2019_A5_301044883.Views
             OSTextLabel.Text = Program.product.OS;
         }
 
+        /// <summary>
+        /// This is an event handler for Open Button on tool Strip Menu
+        /// and opens the saved order details from text file.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //configure save file dialog box

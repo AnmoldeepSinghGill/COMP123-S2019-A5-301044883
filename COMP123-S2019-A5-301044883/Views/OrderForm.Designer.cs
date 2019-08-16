@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.printToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -83,7 +84,6 @@
             this.FinishButton = new System.Windows.Forms.Button();
             this.BackButton = new System.Windows.Forms.Button();
             this.PlatformPictureBox = new System.Windows.Forms.PictureBox();
-            this.printToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SystemComponentsGroupBox.SuspendLayout();
             this.PriceGroupBox.SuspendLayout();
@@ -111,6 +111,16 @@
             this.fileToolStripMenuItem1.Name = "fileToolStripMenuItem1";
             this.fileToolStripMenuItem1.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem1.Text = "&File";
+            // 
+            // printToolStripMenuItem1
+            // 
+            this.printToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripMenuItem1.Image")));
+            this.printToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.printToolStripMenuItem1.Name = "printToolStripMenuItem1";
+            this.printToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.printToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
+            this.printToolStripMenuItem1.Text = "&Print";
+            this.printToolStripMenuItem1.Click += new System.EventHandler(this.printToolStripMenuItem1_Click);
             // 
             // toolStripSeparator7
             // 
@@ -438,7 +448,7 @@
             // ModelLabel
             // 
             this.ModelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.ModelLabel.Location = new System.Drawing.Point(277, 91);
+            this.ModelLabel.Location = new System.Drawing.Point(263, 92);
             this.ModelLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.ModelLabel.Name = "ModelLabel";
             this.ModelLabel.Size = new System.Drawing.Size(88, 36);
@@ -450,20 +460,20 @@
             // 
             this.ModelTextLabel.BackColor = System.Drawing.Color.White;
             this.ModelTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.ModelTextLabel.Location = new System.Drawing.Point(377, 91);
+            this.ModelTextLabel.Location = new System.Drawing.Point(354, 91);
             this.ModelTextLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.ModelTextLabel.Name = "ModelTextLabel";
-            this.ModelTextLabel.Size = new System.Drawing.Size(121, 36);
+            this.ModelTextLabel.Size = new System.Drawing.Size(144, 36);
             this.ModelTextLabel.TabIndex = 7;
             this.ModelTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // PlatformLabel
             // 
             this.PlatformLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.PlatformLabel.Location = new System.Drawing.Point(263, 38);
+            this.PlatformLabel.Location = new System.Drawing.Point(257, 38);
             this.PlatformLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.PlatformLabel.Name = "PlatformLabel";
-            this.PlatformLabel.Size = new System.Drawing.Size(112, 33);
+            this.PlatformLabel.Size = new System.Drawing.Size(93, 33);
             this.PlatformLabel.TabIndex = 4;
             this.PlatformLabel.Text = "Platform ";
             this.PlatformLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -472,10 +482,10 @@
             // 
             this.PlatformTextLabel.BackColor = System.Drawing.Color.White;
             this.PlatformTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.PlatformTextLabel.Location = new System.Drawing.Point(375, 38);
+            this.PlatformTextLabel.Location = new System.Drawing.Point(350, 38);
             this.PlatformTextLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.PlatformTextLabel.Name = "PlatformTextLabel";
-            this.PlatformTextLabel.Size = new System.Drawing.Size(123, 33);
+            this.PlatformTextLabel.Size = new System.Drawing.Size(148, 33);
             this.PlatformTextLabel.TabIndex = 5;
             this.PlatformTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -677,16 +687,6 @@
             this.PlatformPictureBox.Size = new System.Drawing.Size(250, 200);
             this.PlatformPictureBox.TabIndex = 2;
             this.PlatformPictureBox.TabStop = false;
-            // 
-            // printToolStripMenuItem1
-            // 
-            this.printToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripMenuItem1.Image")));
-            this.printToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.printToolStripMenuItem1.Name = "printToolStripMenuItem1";
-            this.printToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.printToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
-            this.printToolStripMenuItem1.Text = "&Print";
-            this.printToolStripMenuItem1.Click += new System.EventHandler(this.printToolStripMenuItem1_Click);
             // 
             // OrderForm
             // 

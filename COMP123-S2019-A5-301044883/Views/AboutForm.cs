@@ -7,6 +7,15 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+ * Author: Anmoldeep Singh Gill
+ * Student ID: 301044883
+ * Created on: 31 July 2019
+ * Description: This is About Form which displays
+ *              the version number, author and description
+ *              of the application.
+ */
+
 namespace COMP123_S2019_A5_301044883.Views
 {
     public partial class AboutForm : Form
@@ -102,6 +111,12 @@ namespace COMP123_S2019_A5_301044883.Views
         }
         #endregion
 
+        /// <summary>
+        /// This is event handler for OK button and 
+        /// it closes the whole application.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void okButton_Click(object sender, EventArgs e)
         {
             this.Hide();

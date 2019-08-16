@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Dollar Computers")]
-[assembly: AssemblyDescription("This application can be used to order computers and save the orders.")]
+[assembly: AssemblyDescription("This application can be used to order computers and save the orders.  \n \n DollarComputers Contact :  \n Phone:  (+1) 5645842156  \n \n Email: customercase@dollarcomputers.ca")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Centennial College")]
+[assembly: AssemblyCompany("Anmoldeep Singh Gill")]
 [assembly: AssemblyProduct("Order_Computers.exe")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.4.6.9")]
+[assembly: AssemblyFileVersion("1.4.7.8")]

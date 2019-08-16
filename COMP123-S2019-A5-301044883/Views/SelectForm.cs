@@ -31,6 +31,12 @@ namespace COMP123_S2019_A5_301044883.Views
             InitializeComponent();
         }
 
+        /// <summary>
+        /// This method Loads the database from datasource to the
+        /// Product Dta Grid View
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SelectForm_Load(object sender, EventArgs e)
         {
             using (var db = new DollarComputersContext())
@@ -40,29 +46,41 @@ namespace COMP123_S2019_A5_301044883.Views
             }
         }
 
+        /// <summary>
+        /// This is an event handler for the Cancel Button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CancelButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        /// <summary>
+        /// This is an event Handler for the Next Button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NextButton_Click(object sender, EventArgs e)
         {
             Program.productInfoForm.Show();
             this.Hide();
         }
 
+        /// <summary>
+        /// This is an event handler for the Selection Changed
+        /// event for Product Data Grid View
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ProductDataGridView_SelectionChanged(object sender, EventArgs e)
         {
+            //Getting the row index og the current row selected
             var rowIndex = ProductDataGridView.CurrentCell.RowIndex;
             var currentRow = ProductDataGridView.Rows[rowIndex];
-            var manufacturer = currentRow.Cells[2].Value.ToString();
-            var model = currentRow.Cells[3].Value.ToString();
-            var cost = currentRow.Cells[1].Value;
 
-            OutputString = manufacturer + " " + model + " " + String.Format("{0:C}", cost);
 
-            HardwareListLabel.Text = OutputString;
-
+            // Store the values of current row of PC Selected in Project Class.
             Program.product.productID = short.Parse(currentRow.Cells[0].Value.ToString());
             Program.product.cost = decimal.Parse(currentRow.Cells[1].Value.ToString());
             Program.product.manufacturer = currentRow.Cells[2].Value.ToString();
@@ -94,6 +112,20 @@ namespace COMP123_S2019_A5_301044883.Views
             Program.product.moust_type = currentRow.Cells[28].Value.ToString();
             Program.product.power = currentRow.Cells[29].Value.ToString();
             Program.product.webcam = currentRow.Cells[30].Value.ToString();
+
+            // shows data of selected computer in Selection Label
+            ShowDatainSelectionLabel();
+        }
+
+        /// <summary>
+        /// This method shows the manufacturer, model and price 
+        /// of the computer selected in ProductDataGridView
+        /// </summary>
+        public void ShowDatainSelectionLabel()
+        {
+            OutputString = Program.product.manufacturer + " " + Program.product.model + " " + String.Format("{0:C}", Program.product.cost);
+
+            HardwareListLabel.Text = OutputString;
         }
     }
 }

@@ -25,12 +25,24 @@ namespace COMP123_S2019_A5_301044883.Views
             InitializeComponent();
         }
 
+        /// <summary>
+        /// This is an event handler for
+        /// the Start order Button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void StartOrderButton_Click(object sender, EventArgs e)
         {
             Program.selectForm.Show();
             this.Hide();
         }
 
+        /// <summary>
+        /// This is the event Handler for the
+        /// open Saved Order Button.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OpenSavedOrderButton_Click(object sender, EventArgs e)
         {
             Program.productInfoForm.Show();

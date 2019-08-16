@@ -17,7 +17,7 @@ using COMP123_S2019_A5_301044883.Properties;
  * Description: This Form gets all the details of the
  *              product that is selected and displays 
  *              them with the picture of Platform and 
- *              Total price with Tax
+ *              Total price with Tax.
  */
 
 namespace COMP123_S2019_A5_301044883.Views
@@ -29,33 +29,12 @@ namespace COMP123_S2019_A5_301044883.Views
             InitializeComponent();
         }
 
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Program.aboutForm.Show();
-        }
-
-        private void BackButton_Click(object sender, EventArgs e)
-        {
-            Program.productInfoForm.Show();
-            this.Hide();
-        }
-
-        private void ExitApplication(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void OrderForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void FinishButton_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Thank You for Ordering Your Computer. \nYour Order will be Processed in 7-10 days.");
-            Application.Exit();
-        }
-
+        /// <summary>
+        /// This method populates the data in the labels of the 
+        /// order form, when the form is activated.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OrderForm_Activated(object sender, EventArgs e)
         {
             ManufacturerTextLabel.Text = Program.product.manufacturer;
@@ -75,16 +54,20 @@ namespace COMP123_S2019_A5_301044883.Views
             ConditionTextLabel.Text = Program.product.condition;
             PriceTextLabel.Text = String.Format("{0:C}", Program.product.cost);
 
-            var salesTax = Math.Round(Convert.ToDouble(Program.product.cost / 100 * 13), 1);
+            // Assigned the sales tax calculation to salesTax variable
+            double salesTax = Math.Round(Convert.ToDouble(Program.product.cost / 100 * 13), 2, MidpointRounding.ToEven);
 
-            SalesTaxTextLabel.Text = String.Format("{0:C}", salesTax);
+            // Assigns the calculated sales tax to the textbox and formats it
+            SalesTaxTextLabel.Text = "$" + salesTax.ToString();
 
-            var totalPrice = Convert.ToDouble(Program.product.cost) + salesTax;
+            // Assigned the total price calculation to totalPrice variable
+            double totalPrice = Convert.ToDouble(Program.product.cost) + salesTax;
 
+            // Assigns the calculated total Price to the  Total price textbox and formats it
             TotalPriceTextLabel.Text = String.Format("{0:C}", totalPrice);
 
-            // Changes the Image as the Platform Changes
-            if(PlatformTextLabel.Text == "Laptop")
+            // Changes the Image as the Platform Changes in Platform Label
+            if (PlatformTextLabel.Text == "Laptop")
             {
                 PlatformPictureBox.Image = Resources.LaptopPic;
             }
@@ -95,6 +78,63 @@ namespace COMP123_S2019_A5_301044883.Views
 
         }
 
+        /// <summary>
+        /// This is event handler for the about Button on Tool Strip
+        /// and it opens the about form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Program.aboutForm.Show();
+        }
+
+        /// <summary>
+        /// This is event handler for the Back Button and 
+        /// it brings back the product info form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            Program.productInfoForm.Show();
+            this.Hide();
+        }
+
+        private void ExitApplication(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        /// <summary>
+        /// This event handler closes the whole applicatiion when the 
+        /// Order Form is closed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void OrderForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        /// <summary>
+        /// This method shows the Message box for order Conformation
+        /// and its delivery schedule.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FinishButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Thank You for Ordering Your Computer. \nYour Order will be Processed in 7-10 days.");
+            Application.Exit();
+        }
+
+        /// <summary>
+        /// This is an event handler for the Print Button 
+        /// on Menubar of the Order Form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void printToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Your order is being Printed", "Printing...", MessageBoxButtons.OK, MessageBoxIcon.Information);
