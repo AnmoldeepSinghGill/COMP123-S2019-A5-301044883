@@ -75,6 +75,19 @@ namespace COMP123_S2019_A5_301044883.Views
         /// <param name="e"></param>
         private void ProductDataGridView_SelectionChanged(object sender, EventArgs e)
         {
+            //Stores Data from selected rows in Products Class
+            StoreDataFromSelectedRowinProduts();
+
+            // shows data of selected computer in Selection Label
+            ShowDatainSelectionLabel();
+        }
+
+        /// <summary>
+        /// This method gets data from selected row and assigns it
+        /// to specific properties in the products claa
+        /// </summary>
+        public void StoreDataFromSelectedRowinProduts()
+        {
             //Getting the row index og the current row selected
             var rowIndex = ProductDataGridView.CurrentCell.RowIndex;
             var currentRow = ProductDataGridView.Rows[rowIndex];
@@ -112,9 +125,6 @@ namespace COMP123_S2019_A5_301044883.Views
             Program.product.moust_type = currentRow.Cells[28].Value.ToString();
             Program.product.power = currentRow.Cells[29].Value.ToString();
             Program.product.webcam = currentRow.Cells[30].Value.ToString();
-
-            // shows data of selected computer in Selection Label
-            ShowDatainSelectionLabel();
         }
 
         /// <summary>
@@ -123,8 +133,10 @@ namespace COMP123_S2019_A5_301044883.Views
         /// </summary>
         public void ShowDatainSelectionLabel()
         {
+            //Assigns Selection Label data to Output String
             OutputString = Program.product.manufacturer + " " + Program.product.model + " " + String.Format("{0:C}", Program.product.cost);
 
+            //Assigns output String to Hardware List Level
             HardwareListLabel.Text = OutputString;
         }
     }

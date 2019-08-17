@@ -55,6 +55,9 @@ namespace COMP123_S2019_A5_301044883.Views
         /// <summary>
         /// This method is used to open the saved order from 
         /// the existing file
+        /// 
+        /// Method of Opening files refrenced from Professor Tom Tsiliopoulus's 
+        /// Saving and Loading Files Code
         /// </summary>
         public void OpenSavedOrder()
         {
@@ -111,6 +114,9 @@ namespace COMP123_S2019_A5_301044883.Views
         /// <summary>
         /// This is an event handler for Save Button on tool Strip Menu
         /// and this saves the current order details in a text file.
+        /// 
+        /// Method of Savaing files refrenced from Professor Tom Tsiliopoulus's 
+        /// Saving and Loading Files Code
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -162,6 +168,7 @@ namespace COMP123_S2019_A5_301044883.Views
         /// <summary>
         /// This is an event handler for the Form closing event 
         /// for Product Info Form
+        /// 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -201,6 +208,9 @@ namespace COMP123_S2019_A5_301044883.Views
         /// <summary>
         /// This is an event handler for Open Button on tool Strip Menu
         /// and opens the saved order details from text file.
+        /// 
+        /// Method of Opening files refrenced from Professor Tom Tsiliopoulus's 
+        /// Saving and Loading Files Code
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
